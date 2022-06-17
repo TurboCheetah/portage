@@ -1,0 +1,38 @@
+# These settings were set by the catalyst build script that automatically
+# built this stage.
+# Please consult /usr/share/portage/config/make.conf.example for a more
+# detailed example.
+
+NTHREADS="8"
+
+source make.conf.lto
+
+COMMON_FLAGS="-march=native ${CFLAGS} -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+MAKEOPTS="-j8 -l8"
+PORTAGE_NICENESS=1
+ACCEPT_KEYWORDS="~amd64"
+VIDEO_CARDS="nvidia"
+FEATURES="ccache"
+CCACHE_DIR="/var/cache/ccache"
+
+USE="aptx bluetooth dbus dhpcd dist-kernel elogind encode graphite gstreamer ldac lto mpv networkmanager nfs \
+nvidia nvdec nvenc pgo pipewire pulseaudio video vulkan wifi X xinerama x264 x265 \
+-cdr -clamav -cups -dvd -dvdr -emacs -gnome -gtk -ios -ipod -kde -qt4 -qt5 -systemd -wayland -xemacs"
+
+CPU_FLAGS_X86="aes avx avx2 f16c fma3 mmx mmxext pclmul popcnt sse sse2 sse3 sse4_1 sse4_2 ssse3"
+
+# NOTE: This stage was built with the bindist Use flag enabled
+PORTDIR="/var/db/repos/gentoo"
+DISTDIR="/var/cache/distfiles"
+PKGDIR="/var/cache/binpkgs"
+
+# This sets the language of build output to English.
+# Please keep this setting intact when reporting bugs.
+LC_MESSAGES=C
+GENTOO_MIRRORS="https://mirror.turbo.ooo/gentoo/"
+ACCEPT_LICENSE="*"
+GRUB_PLATFORMS="efi-64"

@@ -1,0 +1,1 @@
+net-libs/nodejs -lto # LTO is controlled by a USE flag; currently won't build with LTO and GCC 11
